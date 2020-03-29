@@ -1,0 +1,47 @@
+
+body {
+	font-size:15px ;
+	margin: 0px auto;
+	max-width:900px;
+
+}
+
+header {
+	color:#FFFFFF;
+}
+
+li {
+	display: inline-block;
+}
+
+
+
+h3 {
+	font-size: 30px;
+	margin: 0px;
+	text-align:center;
+}
+
+
+li strong {
+	font-weight:bold;
+	margin: 10px;
+	height: 30px;
+	color: black;
+	font-size: 20px;
+}
+
+
+aside {
+	margin-right: 20px;
+	margin-top: 5px;
+	padding-right: 20px;
+	color: #000000;
+	float: right;
+}
+small{
+	color: #598dff;
+	background-color: #e5f2ff;
+}
+
+

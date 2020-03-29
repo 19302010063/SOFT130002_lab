@@ -1,0 +1,25 @@
+
+body {
+    font-size:15px ;
+    margin: 0px auto;
+    max-width:900px;
+    background-color: #e5f2ff;
+}
+form{
+    background-color: rgb(255, 255, 255);
+    display: block;
+    padding: 2em 4em 3em 4em;
+}
+
+input {
+    background-color: #e5f2ff;
+    border: #ffffff solid 1px;
+    width: 8em;
+}
+
+input[type="button"],input[type="submit"] {
+    background-color: #e5f2ff;
+    border: #598dff solid 1px;
+    width: 3em;
+}
+
