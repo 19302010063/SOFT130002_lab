@@ -5,6 +5,7 @@
 ## 截图
 
 ![网页效果截图](images/网页效果截图.png)
+![GitHub截图](images/github截图.png)
 
 ## 第一部分
 
