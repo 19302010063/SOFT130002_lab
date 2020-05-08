@@ -29,7 +29,6 @@
                 console.log("到达一分钟，提前停止");
             }
         },100);
-        console.log(mul);
     }
  // testTime();
 /*
@@ -40,9 +39,9 @@
     ③邮箱字符串的正则匹配的理解需写入lab文档。
     ④telephone与mail均是字符串。
 */
-function testMail(telephone,mail) {
+function testMail(telephone,mail){
     var expression1 = new RegExp("^(\\+\\d{2}-)?(\\d{2,3}-)?([1][3,4,5,7,8][0-9]\\d{8})$", "i");//电话的正则表达式的模型
-    var expression2 = new RegExp(" /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\\.[a-zA-Z0-9_-]{2,3}){1,2})$/", "i");//邮箱的正则表达式的模型
+    var expression2 = new RegExp("^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\\.[a-zA-Z0-9_-]{2,3}){1,2})$", "i");//邮箱的正则表达式的模型
     if (telephone.match(expression1)){
         if (mail.match(expression2)){
             console.log("The telephone is right and the mail is right!");
@@ -70,9 +69,9 @@ function testMail(telephone,mail) {
     ④对该函数中用的正则匹配的理解需写入lab文档。
     ⑤str为字符串。
 */
-function testRedundancy(str) {
+function testRedundancy(str){
     var set=new Set();
-    var expression = new RegExp("/(\\w+)\\s\\1+/ig", "i");
+    var expression = /(\w+)\s\1+/i;
     // if (str.match(expression)){
     var result = expression.exec(str);
     // }
@@ -116,7 +115,7 @@ function testRedundancy(str) {
     ④只能显式使用一次循环。
     ⑤str为字符串。
 */
-function testSpecialReverse(str) {
+function testSpecialReverse(str){
     var array1 = str.replace(/\s+/g," ").split(" ");
     var array2 = array1.reverse();
     var result = "";
@@ -142,7 +141,7 @@ function testSpecialReverse(str) {
     [ 0, 3 ]
     [ 1, 2 ]
 */
-function twoSum(nums, target) {
+function twoSum(nums, target){
     let result = new Set();
     let map = new Map();
     for (let i = 0; i < nums.length; i++) {
@@ -166,12 +165,12 @@ function twoSum(nums, target) {
     ④使用console.log打印即可。
     ⑤str为字符串。
 */
-function lengthOfLongestSubstring(str) {
+function lengthOfLongestSubstring(str){
     let map = new Map();
     let result = 0;
     let j = 0;
-    for (let i = 0; i < str.length; i++) {
-        if (map.has(str[i])) {
+    for (let i = 0; i < str.length; i++){
+        if (map.has(str[i])){
             j = map.get(str[i]) + 1;
         }
         map.set(str[i], i);
@@ -189,25 +188,25 @@ function lengthOfLongestSubstring(str) {
     并在三者分别添加sayHi、saySad、sayHappy函数分别打印"Hi,i am a developing country."、"I am a sad poor country."、"I am a Happy developed country."
     ②请调用他们并打印相关语句即可。
 */
-function Country() {
+function Country(){
     this.name = "国家";
 }
 
-function DevelopingCountry() {
+function DevelopingCountry(){
     Country.call(this);
 }
 DevelopingCountry.prototype.sayHi = function(){
     console.log("Hi,i am a developing country.");
 }
 
-function PoorCountry() {}
+function PoorCountry(){}
 
 PoorCountry.prototype = new Country();
 PoorCountry.prototype.saySad = function(){
     console.log("I am a sad poor country.");
 }
 
-function DevelopedCountry() {
+function DevelopedCountry(){
     Country.call(this);
 }
 
